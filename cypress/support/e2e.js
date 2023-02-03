@@ -14,6 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import '@cypress-audit/lighthouse/commands';
 import './commands';
 import inViewport from './inViewport';
 

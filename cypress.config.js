@@ -14,7 +14,16 @@ module.exports = defineConfig({
     experimentalRunAllSpecs: true,
     baseUrl: 'https://www.planittesting.com',
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      const { lighthouse, prepareAudit } = require('@cypress-audit/lighthouse');
+
+      on('before:browser:launch', (browser = {}, options) => {
+        const launchOptions = options;
+        prepareAudit(launchOptions);
+      });
+
+      on('task', {
+        lighthouse: lighthouse(),
+      });
     },
   },
 });

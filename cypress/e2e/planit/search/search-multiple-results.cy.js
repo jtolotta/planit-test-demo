@@ -14,7 +14,10 @@ describe('Search Multiple Results', () => {
       .then(() => {
         cy.get('div[class="searchBox"] > input')
           .first()
-          .type('Regulatory Compliance{enter}', { force: true });
+          .type('Regulatory Compliance', { force: true });
+        cy.get('input[type="submit"][class*="searchIcon"]').click({
+          force: true,
+        });
         // At least one search result contains the search term
         cy.get('a:contains("Regulatory Compliance")').should('exist');
 

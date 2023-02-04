@@ -1,6 +1,6 @@
 describe('Lighthouse Solutions Page', () => {
   it('Run Solutions Page Report', () => {
-    cy.visit('/au/solutions');
+    cy.visit('/solutions');
 
     const thresholds = {
       performance: 50,

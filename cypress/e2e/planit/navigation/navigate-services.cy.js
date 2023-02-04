@@ -17,7 +17,7 @@ describe('Navigate Services', () => {
 
   // Direct URL navigation
   it('View Testing & QA', () => {
-    cy.visit('/au/services/testing-qa').then(() => {
+    cy.visit('/services/testing-qa').then(() => {
       cy.get('h1:contains("Testing & QA")').should('exist');
     });
   });

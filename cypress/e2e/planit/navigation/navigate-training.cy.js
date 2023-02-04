@@ -3,7 +3,7 @@ describe('Navigate Training', () => {
   // and check the service menu scrolls correctly
   // using a custom command
   it('View ISTQB Foundation', () => {
-    cy.visit('/au/training/istqb-foundation-certificate');
+    cy.visit('/training/istqb-foundation-certificate');
     cy.get('h1:contains("ISTQB Foundation Certificate")').should('exist');
     cy.get('a:contains("Overview")').click();
     cy.get(

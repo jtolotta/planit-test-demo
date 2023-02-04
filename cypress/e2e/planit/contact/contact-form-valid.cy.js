@@ -2,7 +2,7 @@ import faker from '@faker-js/faker';
 
 describe('Contact Form Valid', () => {
   beforeEach(() => {
-    cy.visit('/au/contact');
+    cy.visit('/contact');
   });
 
   it('Check Valid Contact Form Submitted', () => {

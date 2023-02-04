@@ -1,6 +1,6 @@
 describe('Contact Form Invalid', () => {
   beforeEach(() => {
-    cy.visit('/au/contact');
+    cy.visit('/contact');
   });
 
   it('Check for Empty Contact Field Submission', () => {

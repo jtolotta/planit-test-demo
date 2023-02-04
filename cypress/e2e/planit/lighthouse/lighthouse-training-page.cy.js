@@ -1,6 +1,6 @@
 describe('Lighthouse Training Page', () => {
   it('Run Training Page Report', () => {
-    cy.visit('/au/training');
+    cy.visit('/training');
 
     const thresholds = {
       performance: 50,

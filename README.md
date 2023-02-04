@@ -5,9 +5,9 @@ Test the Planit Testing website to ensure functional and non-functional capabili
 ## Overview
 This demos the following technologies:
 - [Cypress](https://www.cypress.io/)
-- Cypress Cloud
+- [Cypress Cloud](https://cloud.cypress.io)
 - [Node.js](https://nodejs.org/en/)
-- Google Lighthouse
+- [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
 Each test provides an explanation of the issue, steps and expected outcome.
 
@@ -32,4 +32,4 @@ Perform the following to start running tests:
 Tests are located in the `./cypress/e2e` folder.
 
 ## Test Reports
-Test reports are located on Cypress Cloud
+Test reports from GitHub Action runs are located on [Cypress Cloud](https://cloud.cypress.io/projects/4vshd3/runs)

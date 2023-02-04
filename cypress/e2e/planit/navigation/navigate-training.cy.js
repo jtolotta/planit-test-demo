@@ -12,7 +12,7 @@ describe('Navigate Training', () => {
     cy.get('h2:contains("ISTQB Foundation Exam")').should('not.be.inViewport');
     cy.get('a:contains("Exam Details")')
       .click()
-      .wait(2000)
+      .wait(3000)
       .then(() => {
         cy.get('h2:contains("ISTQB Foundation Exam")').should('be.inViewport');
       });

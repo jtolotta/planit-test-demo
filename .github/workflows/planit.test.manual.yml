@@ -36,7 +36,7 @@ jobs:
         node-version: '18'
 
     - name: Run Tests
-      uses: cypress-io/github-action@v5
+      uses: cypress-io/github-action@v5.0.6
       with:
         config-file: cypress.config.js
         browser: chrome

@@ -1,24 +1,16 @@
-describe('Search Single Result', () => {
+describe("Search Single Result", () => {
   before(() => {
-    cy.visit('/');
+    cy.visit("/");
+
+    // Dismiss the overlay if the site refreshes
+    cy.get("body").click({ force: true });
   });
 
   // Use search criteria that returns only a single result
-  it('Search for The Rise of Autonomous Vehicles', () => {
-    // Dismiss the overlay if the site refreshes
-    cy.get('body').click({ force: true }).wait(1000);
-    cy.get('div[onclick="SearchBoxClick();"]').click();
-    cy.get('div#dp-MegaSearch')
-      .invoke('mouseout')
-      .then(() => {
-        cy.get('div[class="searchBox"] > input')
-          .first()
-          .type('The Rise of Autonomous Vehicles', { force: true });
-        cy.get('input[type="submit"][class*="searchIcon"]').click({
-          force: true,
-        });
-        cy.get('a:contains("The Rise of Autonomous Vehicles")').should('exist');
-        cy.get('div:contains("No more result were found.")').should('exist');
-      });
+  it("Search for The Rise of Autonomous Vehicles", () => {
+    cy.get('input[name="s"]').first().click().type("The Rise of Autonomous Vehicles", { force: true });
+    cy.get('button[title="Search"]').first().click();
+    cy.get('h1:contains("The Rise of Autonomous Vehicles")').should("exist");
+    cy.get('div:contains("It seems we can’t find what you’re looking for.")').should("exist");
   });
 });
